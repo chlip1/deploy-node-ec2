@@ -49,8 +49,8 @@ This README document provides a comprehensive guide for deploying a Node.js appl
   - Use the SSH command you retrieved from the AWS console to connect to your instance.
 
  ### Step 5: Preparing the Linux Server for Node.js
- **Description**: This step involves updating your Linux server and setting up Node.js using Node Version Manager (NVM). NVM allows you to easily manage and switch between different Node.js versions.
- **Tasks**:
+ - **Description**: This step involves updating your Linux server and setting up Node.js using Node Version Manager (NVM). NVM allows you to easily manage and switch between different Node.js versions.
+ - **Tasks**:
   1. **Update and Upgrade the Server**:
      - Run the following commands to update your package listings and upgrade your system to the latest versions of installed packages:
        ```bash
