@@ -37,3 +37,13 @@ This README document provides a comprehensive guide for deploying a Node.js appl
   - Select the security group that has been added to your instance and add the required rules to it by clicking 'Edit inbound rules'.
   - Add rules in the same way as shown in the screenshot, where the value of 5000 corresponds to the port on which the application is running.
  ![image](https://github.com/chlip1/deploy-node-ec2/assets/81360555/35dbc28e-7be3-4ee7-a7c1-0230f5d48a8f)
+
+### Step 4: Connect To EC2 via SSH
+- **Description**: Secure Shell (SSH) is a protocol used to securely log onto remote systems. In this step, you will connect to your AWS EC2 instance using SSH. AWS provides the exact SSH command, including the key pair and public DNS or IP address, in the EC2 console.
+- **Tasks**:
+  - Select your instance and click on the 'Connect' button at the top.
+  - In the "Connect to instance" section, you will find the SSH command for your instance under "SSH client" tab.
+  - The command will typically look like this: ssh -i "your-key-pair.pem" ec2-user@ec2-xx-xxx-xx-xx.compute-1.amazonaws.com. Replace "your-key-pair.pem" with your actual key pair file name.
+  - Open a terminal on your local machine.
+  - Ensure that your private key file (.pem file) permissions are set correctly with the command: chmod 400 your-key-pair.pem.
+  - Use the SSH command you retrieved from the AWS console to connect to your instance.
