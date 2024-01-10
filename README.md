@@ -47,3 +47,31 @@ This README document provides a comprehensive guide for deploying a Node.js appl
   - Open a terminal on your local machine.
   - Ensure that your private key file (.pem file) permissions are set correctly with the command: chmod 400 your-key-pair.pem.
   - Use the SSH command you retrieved from the AWS console to connect to your instance.
+
+ ### Step 5: Preparing the Linux Server for Node.js
+ **Description**: This step involves updating your Linux server and setting up Node.js using Node Version Manager (NVM). NVM allows you to easily manage and switch between different Node.js versions.
+ **Tasks**:
+  1. **Update and Upgrade the Server**:
+     - Run the following commands to update your package listings and upgrade your system to the latest versions of installed packages:
+       ```bash
+       sudo apt update && sudo apt upgrade -y
+       ```
+
+  2. **Install NVM (Node Version Manager)**:
+     - Execute the following command to download and install NVM:
+       ```bash
+       curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+       ```
+     - This script clones the NVM repository to `~/.nvm` and adds the source lines to your profile (`~/.bashrc`, `~/.zshrc`, `~/.profile`, or `~/.bash_profile`).
+
+  3. **Load NVM and Install Node.js**:
+     - To load NVM, you'll need to either open a new terminal session or run these commands:
+       ```bash
+       export NVM_DIR="$HOME/.nvm"
+       [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+       [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+       ```
+     - Once NVM is loaded, install the latest LTS version of Node.js using NVM:
+       ```bash
+       nvm install --lts
+       ```
