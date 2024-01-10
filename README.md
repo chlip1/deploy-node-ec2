@@ -76,9 +76,7 @@ This README document provides a comprehensive guide for deploying a Node.js appl
        nvm install --lts
        ```
 ### Step 6: Launching the Node.js Application with PM2
-
 - **Description**: This step involves navigating to your Node.js application directory, installing dependencies, and using PM2 to start and manage your application process.
-
 - **Tasks**:
   1. **Navigate to Your Application Directory**:
      - Change to the application's directory (e.g backend) skip this step if you only have node js applications in the repository:
